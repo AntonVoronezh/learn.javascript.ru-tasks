@@ -1,4 +1,4 @@
-# avascript.ru
+# javascript.ru
 
 
  ## Описание
