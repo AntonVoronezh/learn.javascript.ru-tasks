@@ -1,15 +1,21 @@
-# Получить последний элемент массива
+// Input: J = "aA", S = "aAAbbbb"
+// Output: 3
+// Input: J = "z", S = "ZZ"
+// Output: 0
+const ff = 'aAAbbbb';
 
- ## Задание
-```
-Как получить последний элемент из произвольного массива?
+const numJewelsInStones = (J, S) => {
+  // var str = "Ослик Иа-Иа посмотрел на виадук"; // ищем в этой строке
+  const target = J; // цель поиска
 
-У нас есть массив goods. Сколько в нем элементов – не знаем,
- но можем прочитать из goods.length.
-
-Напишите код для получения последнего элемента goods.
-
-
-
-```
-
+  let pos = 0;
+  let out = 0;
+  while (true) {
+    const foundPos = S.indexOf(target, pos);
+    if (foundPos === -1) break;
+    pos = foundPos + 1;
+    out = foundPos;
+  }
+  return out;
+};
+console.log(numJewelsInStones('A', ff));
